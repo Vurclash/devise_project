@@ -1,1 +1,16 @@
-<h1>
+<h1>New Hobby!</h1>
+<br />
+<%= form_with(model: @hobby, local: true) do |h| %>
+
+  <div class="field">
+    <%= h.label :name %>
+    <%= h.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    <%= h.label :description %>
+    <%= h.text_area :description %>
+  </div>
+
+  <%= h.submit "Create Hobby", class: "btn blue accent-4" %>
+<% end %>
